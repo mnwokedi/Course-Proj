@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php include "templates/header.php"; ?>
     <nav>
       <ul class="navigation">
         <li>
@@ -9,28 +10,49 @@
         <li><button>New</button></li>
       </ul>
     </nav>
+    <?php include "templates/footer.php"; ?>
     <link rel="stylesheet" href="CPcss.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Contact List</title>
   </head>
-  <body>
-    <p>New Contact</p>
+  <body id="newcontactpage">
+    <?php include "templates/header.php"; ?>
+    <h1>Contact Management System</h1>
+    <h2>Add New Contact</h2>
+    <div class="cms-table" id="cmsTableContainer">
+      <div class="cms-table-row">
+        <div class="column-name"></div>
+        <div class="column-email"></div>
+        <div class="column-phone"></div>
+        <div class="column-addentry" id="addnewentry"></div>
+      </div>
+      <span id="tablebody"></span>
+    </div>
     <section>
-      <form action="" method="">
-        <label for="Name">Name</label>
-        <input type="text" id="Name" placeholder="Name" />
-
-        <label for="Email">Email</label>
+      <form action="" method="POST">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter Your Name" />
+        <label for="email">Email</label>
         <input
+          id="email"
           type="email"
-          id="Email"
           placeholder="Enter Your Email"
         /><br /><br />
-        <label for="Number">Phone Number</label>
-        <input type="tel" id="Number" placeholder="Enter Your Phone Number" />
-        <input type="submit" name="submitbutton" />
+        <label for="number">Phone Number</label>
+        <input id="number" type="tel" placeholder="Enter Your Phone Number" />
+
+        <input
+          id="submitbutton"
+          type="submit"
+          name="submitbutton"
+          value="submit"
+        />
       </form>
     </section>
+    <button id="clearBtn" style="position: absolute; right: 0px; bottom: 0px;">
+      clear storage
+    </button>
+    <script src="CPjs.js"></script>
   </body>
 </html>
