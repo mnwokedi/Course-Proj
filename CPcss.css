@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+}
+table {
+  text-align: center;
+  align-items: center;
+}
+.navigation {
+  text-align: center;
+  padding: 0;
+}
+.navigation li {
+  display: inline-block;
+  text-align: center;
+}
